@@ -1,0 +1,226 @@
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.add-btn {
+  background: #2563eb;
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background: #1d4ed8;
+}
+
+.user-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.user-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.user-form small {
+  color: red;
+  display: block;
+  margin-top: -10px;
+}
+
+.user-form button {
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+/* ================= FILTER ================= */
+
+.filter-btn{
+  background:#f59e0b;
+  color:#fff;
+  border:none;
+  padding:10px 18px;
+  border-radius:8px;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.filter-btn:hover{
+  background:#d97706;
+}
+
+.filter-popup{
+  margin:20px 0;
+  background:#fff;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+}
+
+.filter-popup h3{
+  grid-column:1/span 2;
+}
+
+.filter-popup input{
+  padding:10px;
+  border:1px solid #ddd;
+  border-radius:6px;
+}
+
+.filter-popup button{
+  grid-column:1/span 2;
+  background:#2563eb;
+  color:white;
+  border:none;
+  padding:12px;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+.filter-popup button:hover{
+  background:#1d4ed8;
+}
+/* ================= SORT BAR ================= */
+
+.sort-bar{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin:20px 0;
+  padding:15px;
+  background:#fff;
+  border-radius:10px;
+  box-shadow:0 4px 10px rgba(0,0,0,.1);
+}
+
+.sort-bar select{
+  padding:10px;
+  border:1px solid #ccc;
+  border-radius:6px;
+}
+
+.sort-bar label{
+  font-weight:600;
+}
+/* ================= PAGINATION ================= */
+
+.pagination{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-top:20px;
+  padding:15px;
+  background:#fff;
+  border-radius:10px;
+  box-shadow:0 4px 10px rgba(0,0,0,.1);
+}
+
+.pagination select{
+  padding:8px 12px;
+  border:1px solid #ccc;
+  border-radius:6px;
+}
+
+.page-buttons{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.page-buttons button{
+  padding:8px 15px;
+  border:none;
+  background:#2563eb;
+  color:white;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+.page-buttons button:hover:not(:disabled){
+  background:#1d4ed8;
+}
+
+.page-buttons button:disabled{
+  background:#9ca3af;
+  cursor:not-allowed;
+}
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+  .container{
+    padding:15px;
+  }
+
+  .toolbar{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .toolbar button{
+    width:100%;
+  }
+
+  .search-bar{
+    width:100%;
+  }
+
+  .search-bar input{
+    width:100%;
+  }
+
+  .filter-popup{
+    grid-template-columns:1fr;
+  }
+
+  .filter-popup h3{
+    grid-column:1;
+  }
+
+  .filter-popup button{
+    grid-column:1;
+  }
+
+  .sort-bar{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .sort-bar select{
+    width:100%;
+  }
+
+  .pagination{
+    flex-direction:column;
+    gap:15px;
+  }
+
+  .page-buttons{
+    width:100%;
+    justify-content:center;
+  }
+
+  table{
+    display:block;
+    overflow-x:auto;
+  }
+}
